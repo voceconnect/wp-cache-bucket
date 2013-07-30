@@ -1,14 +1,14 @@
 <?php
 
-/**
- * WP Cache Bucket
- * Allows cache items to be tied to a single validation key so they can all be 
- * expired at once without having to stick all of them into a single cache key
- * 
- * @author prettyboymp
- */
-
 if ( !class_exists('WP_Cache_Bucket') ) {
+
+	/**
+	 * WP Cache Bucket
+	 * Allows cache items to be tied to a single validation key so they can all be 
+	 * expired at once without having to stick all of them into a single cache key
+	 * 
+	 * @author prettyboymp
+	 */
 
 	class WP_Cache_Bucket {
 
