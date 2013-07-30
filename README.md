@@ -34,7 +34,7 @@ Use ```wp_cache_bucket_flush()``` to destroy a cached bucket.
 * **How is this different than WordPress Cache?**
   * *This plugin isn't much different from the built-in WordPress object cache methods, in fact it still uses them, it just groups keys before storing them*
 
-# Changelog
+## Changelog
 **1.01**  
 *Updating readme*  
 
