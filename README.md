@@ -38,8 +38,10 @@ Use ```wp_cache_bucket_flush()``` to destroy a cached bucket.
 
 ## Changelog
 **1.1**  
-*Updating readme* 
-*Converstion to class*
+
+* Updating readme
+* Conversion to class
 
 **1.0**  
-*Initial release.*  
+
+* Initial release
