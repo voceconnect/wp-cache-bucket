@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 == Description ==
 Allows cache items to be tied to a single validation key so they can all be expired at once without having to stick all of them into a single cache key.
 
-Cache bucket uses the build-in WordPress wp_cache but contains methods to associate multiple items with a single cache object or 'bucket'. This is helpful when you have multiple items that need to be updated when one item is modified.
+Cache bucket uses the built-in WordPress wp_cache but contains methods to associate multiple items with a single cache object or 'bucket'. This is helpful when you have multiple items that need to be updated when one item is modified.
 
 == Installation ==
 
