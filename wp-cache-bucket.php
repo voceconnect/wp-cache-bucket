@@ -1,4 +1,13 @@
 <?php
+/*
+Plugin Name: WP Cache Bucket
+Plugin URI: https://github.com/voceconnect/wp-cache-bucket
+Description: Allows cache items to be tied to a single validation key
+Version: 1.02
+Author: Mike Pretty, Curtis Loisel, Voce Platforms
+Author URI: http://voceplatforms.com
+License: GPL2
+*/
 
 if ( !class_exists('WP_Cache_Bucket') ) {
 
@@ -9,7 +18,6 @@ if ( !class_exists('WP_Cache_Bucket') ) {
 	 * 
 	 * @author prettyboymp
 	 */
-
 	class WP_Cache_Bucket {
 
 		public static function bucket_add($bucket, $key, $data, $group = '', $expire = 0) {
