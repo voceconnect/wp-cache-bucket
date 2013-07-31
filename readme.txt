@@ -14,10 +14,10 @@ Cache bucket uses the built-in WordPress wp_cache but contains methods to associ
 
 == Installation ==
 
-### As standard plugin:
+= As standard plugin: =
 > See [Installing Plugins](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins).
 
-### As theme or plugin dependency:
+= As theme or plugin dependency: =
 > After dropping the plugin into the containing theme or plugin, add the following:
 
 	if( ! class_exists( 'Voce_Widget_Cache' ) ) {
