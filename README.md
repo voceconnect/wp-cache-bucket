@@ -4,7 +4,7 @@ Contributors: voceplatforms, prettyboymp, csloisel
 Tags: cache, caching, performance, optimization  
 Requires at least: 3.0  
 Tested up to: 3.5  
-Stable tag: 1.1
+Stable tag: 1.1  
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,10 +20,11 @@ Cache bucket uses the built-in WordPress wp_cache but contains methods to associ
 
 ### As theme or plugin dependency:
 > After dropping the plugin into the containing theme or plugin, add the following:
-
-	if( ! class_exists( 'Voce_Widget_Cache' ) ) {
-	    require_once( $path_to_voce_cached_nav . '/voce-cached-nav.php' );
-	}
+```php
+if( ! class_exists( 'WP_Cache_Bucket' ) ) {
+    require_once( $path_to_wp_cache_bucket . '/wp-cache-bucket.php' );
+}
+```
 
 ## Usage
 Use `wp_cache_bucket_add()` to add a cache bucket.  
@@ -38,10 +39,8 @@ Use `wp_cache_bucket_flush()` to destroy a cached bucket.
 
 ## Changelog
 **1.1**  
-
 * Updating readme
 * Conversion to class
 
 **1.0**  
-
 * Initial release
