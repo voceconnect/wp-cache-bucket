@@ -26,7 +26,7 @@ Cache bucket uses the built-in WordPress wp_cache but contains methods to associ
 	}
 
 ## Usage
-Use ```wp_cache_bucket_add()```to add a cache bucket.  
+Use ```wp_cache_bucket_add()``` to add a cache bucket.  
 Use ```wp_cache_bucket_set()``` to set a cache bucket.  
 Use ```wp_cache_bucket_get()``` to get a cache bucket.  
 Use ```wp_cache_bucket_flush()``` to destroy a cached bucket.  
