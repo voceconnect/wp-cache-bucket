@@ -13,29 +13,27 @@ if ( !class_exists('WP_Cache_Bucket') ) {
 
 	/**
 	 * WP Cache Bucket
-	 * Allows cache items to be tied to a single validation key so they can all be 
+	 * Allows cache items to be tied to a single validation key so they can all be
 	 * expired at once without having to stick all of them into a single cache key
-	 * 
-	 * @author prettyboymp
 	 */
 	class WP_Cache_Bucket {
 
 		public static function bucket_add($bucket, $key, $data, $group = '', $expire = 0) {
 			$structured_data = array(
-				'key' => self::_get_cache_bucket_key($bucket, $group), 
+				'key' => self::_get_cache_bucket_key($bucket, $group),
 				'data' => $data
 			);
-			
-			return wp_cache_add($key, $structured_data, $group, $expire);		
+
+			return wp_cache_add($key, $structured_data, $group, $expire);
 		}
 
 		public static function bucket_set($bucket, $key, $data, $group = '', $expire = 0) {
 			$structured_data = array(
-				'key' => self::_get_cache_bucket_key($bucket, $group), 
+				'key' => self::_get_cache_bucket_key($bucket, $group),
 				'data' => $data
 			);
-			
-			return wp_cache_set($key, $structured_data, $group, $expire);		
+
+			return wp_cache_set($key, $structured_data, $group, $expire);
 		}
 
 		public static function bucket_get($bucket, $key, $group = '', $force = false) {
@@ -44,12 +42,12 @@ if ( !class_exists('WP_Cache_Bucket') ) {
 				($structured_data['key'] === self::_get_cache_bucket_key( $bucket , $group))) {
 				return $structured_data['data'];
 			}
-			return false;		
+			return false;
 		}
 
 		public static function bucket_flush($bucket, $group = '') {
 			wp_cache_delete('wpcb_key_'. $bucket, $group);
-		}	
+		}
 
 		/**
 		 * Returns the key that validates the bucket
@@ -63,7 +61,7 @@ if ( !class_exists('WP_Cache_Bucket') ) {
 				$key = md5( uniqid( microtime() . mt_rand(), true ) );
 				wp_cache_set('wpcb_key_'. $bucket, $key, $group);
 			}
-			
+
 			return $key;
 		}
 
