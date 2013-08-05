@@ -1,16 +1,25 @@
 === WP Cache Bucket ===
-Contributors: voceplatforms, prettyboymp, csloisel  
-Tags: cache, caching, performance, optimization  
-Requires at least: 3.0  
-Tested up to: 3.5  
+Contributors: voceplatforms, prettyboymp, csloisel
+Tags: cache, caching, performance, optimization
+Requires at least: 3.0
+Tested up to: 3.5
 Stable tag: 1.1
-License: GPLv2 or later  
+License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-== Description ==
-Allows cache items to be tied to a single validation key so they can all be expired at once without having to stick all of them into a single cache key.
+Allows cache items to be tied to a single validation key so they can all be expired at once.
 
-Cache bucket uses the built-in WordPress wp_cache but contains methods to associate multiple items with a single cache object or 'bucket'. This is helpful when you have multiple items that need to be updated when one item is modified.
+== Description ==
+
+Cache bucket uses the built-in WordPress `wp_cache` but contains methods to associate multiple items with a single cache object or 'bucket' without having to stick all of them into a single cache key. This is helpful when you have multiple items that need to be updated when one item is modified.
+
+Because the key used to identify the cached item is dependant on other variables when it's being accessed, there is no easy way to identify all of the related keys that need to expire, and Memcached doesn't provide is a way to invalidate a group of data.  WP Cache Bucket provides a wrapper around the cache that gives a "bucket" interface, allowing us to easily expire the entire set of cached menus when an object changes.
+
+= Usage =
+Use `wp_cache_bucket_add()` to add a cache bucket.  
+Use `wp_cache_bucket_set()` to set a cache bucket.  
+Use `wp_cache_bucket_get()` to get a cache bucket.  
+Use `wp_cache_bucket_flush()` to destroy a cached bucket.  
 
 == Installation ==
 
@@ -20,15 +29,9 @@ Cache bucket uses the built-in WordPress wp_cache but contains methods to associ
 = As theme or plugin dependency: =
 > After dropping the plugin into the containing theme or plugin, add the following:
 
-	if( ! class_exists( 'Voce_Widget_Cache' ) ) {
-	    require_once( $path_to_voce_cached_nav . '/voce-cached-nav.php' );
+	if( ! class_exists( 'WP_Cache_Bucket' ) ) {
+	    require_once( $path_to_wp_cache_bucket . '/wp-cache-bucket.php' );
 	}
-
-== Usage ==
-Use `wp_cache_bucket_add()` to add a cache bucket.  
-Use `wp_cache_bucket_set()` to set a cache bucket.  
-Use `wp_cache_bucket_get()` to get a cache bucket.  
-Use `wp_cache_bucket_flush()` to destroy a cached bucket.  
 
 == Frequently Asked Questions ==
 
@@ -36,11 +39,9 @@ Use `wp_cache_bucket_flush()` to destroy a cached bucket.
   * *This plugin isn't much different from the built-in WordPress object cache methods, in fact it still uses them. The biggest advantage of this plugin is the ability to flush all data associated with a bucket.*
 
 == Changelog ==
-**1.1**  
-
+= 1.1 =
 * Updating readme
 * Conversion to class
 
-**1.0**  
-
+= 1.0 =
 * Initial release
