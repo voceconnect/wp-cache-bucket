@@ -11,6 +11,9 @@ Allows cache items to be tied to a single validation key so they can all be expi
 
 == Description ==
 
+= Please Note: =
+*This plugin does **not** do anything by itself on activation. It is meant as a helper class for theme and plugin developers.*
+
 Cache bucket uses the built-in WordPress `wp_cache` but contains methods to associate multiple items with a single cache object or 'bucket' without having to stick all of them into a single cache key. This is helpful when you have multiple items that need to be updated when one item is modified.
 
 Because the key used to identify the cached item is dependant on other variables when it's being accessed, there is no easy way to identify all of the related keys that need to expire, and Memcached doesn't provide is a way to invalidate a group of data.  WP Cache Bucket provides a wrapper around the cache that gives a "bucket" interface, allowing us to easily expire the entire set of cached menus when an object changes.
