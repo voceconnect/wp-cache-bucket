@@ -1,0 +1,24 @@
+{
+    "name": "voceconnect/wp-cache-bucket",
+    "description": "Allows cache items to be tied to a single validation key",
+    "keywords": ["wordpress", "cache"],
+    "license": "GPLv2+",
+    "authors": [
+        {
+            "name": "Michael Pretty",
+            "email": "mpretty@voceconnect.com"
+        },
+        {
+            "name": "Kevin Langley Jr",
+            "email": "klangley@voceconnect.com"
+        },
+        {
+            "name": "Curtis Loisel",
+            "email": "curtis@voceconnect.com"
+        }
+    ],
+    "type": "library",
+    "autoload": {
+        "files": ["wp-cache-bucket.php"]
+    }
+}
