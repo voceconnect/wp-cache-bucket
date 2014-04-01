@@ -29,7 +29,7 @@ if( ! class_exists( 'WP_Cache_Bucket' ) ) {
 ## Usage
 Use `wp_cache_bucket_add( $bucket, $key, $data, $group = '', $expire = 0 )` to add a cache bucket.  
 Use `wp_cache_bucket_set( $bucket, $key, $data, $group = '', $expire = 0 )` to set a cache bucket.  
-Use `wp_cache_bucket_get( $bucket, $key, $data, $group = '', $force = false )` to get a cache bucket.  
+Use `wp_cache_bucket_get( $bucket, $key, $group = '', $force = false )` to get a cache bucket.  
 Use `wp_cache_bucket_flush( $bucket, $group = '' )` to destroy a cached bucket.  
 
 ## Frequently Asked Questions
