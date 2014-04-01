@@ -3,7 +3,7 @@
 Plugin Name: WP Cache Bucket
 Plugin URI: https://github.com/voceconnect/wp-cache-bucket
 Description: Allows cache items to be tied to a single validation key
-Version: 1.1
+Version: 1.1.1
 Author: Mike Pretty, Curtis Loisel, Voce Platforms
 Author URI: http://voceplatforms.com
 License: GPL2

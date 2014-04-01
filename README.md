@@ -1,10 +1,10 @@
 WP Cache Bucket
 =================
-Contributors: voceplatforms, prettyboymp, csloisel  
+Contributors: voceplatforms, prettyboymp, csloisel, kevinlangleyjr  
 Tags: cache, caching, performance, optimization  
 Requires at least: 3.0  
-Tested up to: 3.5  
-Stable tag: 1.1  
+Tested up to: 3.8.1  
+Stable tag: 1.1.1  
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,10 +27,10 @@ if( ! class_exists( 'WP_Cache_Bucket' ) ) {
 ```
 
 ## Usage
-Use `wp_cache_bucket_add()` to add a cache bucket.  
-Use `wp_cache_bucket_set()` to set a cache bucket.  
-Use `wp_cache_bucket_get()` to get a cache bucket.  
-Use `wp_cache_bucket_flush()` to destroy a cached bucket.  
+Use `wp_cache_bucket_add( $bucket, $key, $data, $group = '', $expire = 0 )` to add a cache bucket.  
+Use `wp_cache_bucket_set( $bucket, $key, $data, $group = '', $expire = 0 )` to set a cache bucket.  
+Use `wp_cache_bucket_get( $bucket, $key, $data, $group = '', $force = false )` to get a cache bucket.  
+Use `wp_cache_bucket_flush( $bucket, $group = '' )` to destroy a cached bucket.  
 
 ## Frequently Asked Questions
 
@@ -38,6 +38,9 @@ Use `wp_cache_bucket_flush()` to destroy a cached bucket.
   * *This plugin isn't much different from the built-in WordPress object cache methods, in fact it still uses them. The biggest advantage of this plugin is the ability to flush all data associated with a bucket.*
 
 ## Changelog
+**1.1.1**  
+* Updating readme with function parameters
+
 **1.1**  
 * Updating readme
 * Conversion to class
