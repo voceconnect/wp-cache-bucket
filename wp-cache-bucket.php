@@ -55,7 +55,7 @@ if ( !class_exists('WP_Cache_Bucket') ) {
 		 * @param string $group
 		 * @return string
 		 */
-		private function _get_cache_bucket_key($bucket, $group = '') {
+		private static function _get_cache_bucket_key($bucket, $group = '') {
 			$key = wp_cache_get('wpcb_key_'. $bucket, $group);
 			if(false === $key) {
 				$key = md5( uniqid( microtime() . mt_rand(), true ) );
