@@ -20,10 +20,13 @@ Because the key used to identify the cached item is dependent on other variables
 = Usage =
 Cache Add:
 `wp_cache_bucket_add( $bucket, $key, $data, $group = '', $expire = 0 )`
+
 Cache Set:
 `wp_cache_bucket_set( $bucket, $key, $data, $group = '', $expire = 0 )`
+
 Cache Get:
 `wp_cache_bucket_get( $bucket, $key, $group = '', $force = false )`
+
 Cache Delete:
 wp_cache_bucket_flush( $bucket, $group = '' )`
 
