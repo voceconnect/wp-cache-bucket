@@ -14,7 +14,7 @@ Cache bucket uses the built-in WordPress `wp_cache` but contains methods to asso
 
 Because the key used to identify the cached item is dependent on other variables when it's being accessed, there is no easy way to identify all of the related keys that need to expire, and Memcached doesn't provide is a way to invalidate a group of data.  WP Cache Bucket provides a wrapper around the cache that gives a "bucket" interface, allowing us to easily expire the entire set of cached menus when an object changes.
 
-= Please Note: =
+**Please Note:**
 This plugin does not do anything by itself on activation. It is meant to be a helper class for theme and plugin developers.
 
 = Usage =
