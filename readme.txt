@@ -31,10 +31,10 @@ wp_cache_bucket_flush( $bucket, $group = '' )`
 == Installation ==
 
 = As standard plugin: =
-> See [Installing Plugins](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins).
+See [Installing Plugins](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins).
 
 = As theme or plugin dependency: =
-> After dropping the plugin into the containing theme or plugin, add the following:
+After dropping the plugin into the containing theme or plugin, add this snippet:
 
 	if( ! class_exists( 'WP_Cache_Bucket' ) ) {
 	    require_once( $path_to_wp_cache_bucket . '/wp-cache-bucket.php' );
