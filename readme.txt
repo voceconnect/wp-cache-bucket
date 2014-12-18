@@ -28,7 +28,7 @@ Cache Get:
 `wp_cache_bucket_get( $bucket, $key, $group = '', $force = false )`
 
 Cache Delete:
-wp_cache_bucket_flush( $bucket, $group = '' )`
+`wp_cache_bucket_flush( $bucket, $group = '' )`
 
 == Installation ==
 

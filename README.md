@@ -18,17 +18,17 @@ Because the key used to identify the cached item is dependent on other variables
 This plugin does not do anything by itself on activation. It is meant to be a helper class for theme and plugin developers.
 
 ### Usage
-Cache Add:
+Cache Add:  
 `wp_cache_bucket_add( $bucket, $key, $data, $group = '', $expire = 0 )`
 
-Cache Set:
+Cache Set:  
 `wp_cache_bucket_set( $bucket, $key, $data, $group = '', $expire = 0 )`
 
-Cache Get:
+Cache Get:  
 `wp_cache_bucket_get( $bucket, $key, $group = '', $force = false )`
 
-Cache Delete:
-wp_cache_bucket_flush( $bucket, $group = '' )`
+Cache Delete:  
+`wp_cache_bucket_flush( $bucket, $group = '' )`
 
 ## Installation
 
