@@ -2,8 +2,8 @@
 Contributors: voceplatforms, prettyboymp, csloisel, kevinlangleyjr
 Tags: cache, caching, performance, optimization
 Requires at least: 3.0
-Tested up to: 3.8.1
-Stable tag: 1.1.2
+Tested up to: 4.1
+Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,10 +19,10 @@ Cache bucket uses the built-in WordPress `wp_cache` but contains methods to asso
 Because the key used to identify the cached item is dependant on other variables when it's being accessed, there is no easy way to identify all of the related keys that need to expire, and Memcached doesn't provide is a way to invalidate a group of data.  WP Cache Bucket provides a wrapper around the cache that gives a "bucket" interface, allowing us to easily expire the entire set of cached menus when an object changes.
 
 = Usage =
-Use `wp_cache_bucket_add( $bucket, $key, $data, $group = '', $expire = 0 )` to add a cache bucket.  
-Use `wp_cache_bucket_set( $bucket, $key, $data, $group = '', $expire = 0 )` to set a cache bucket.  
-Use `wp_cache_bucket_get( $bucket, $key, $group = '', $force = false )` to get a cache bucket.  
-Use `wp_cache_bucket_flush( $bucket, $group = '' )` to destroy a cached bucket.  
+Use `wp_cache_bucket_add( $bucket, $key, $data, $group = '', $expire = 0 )` to add a cache bucket.
+Use `wp_cache_bucket_set( $bucket, $key, $data, $group = '', $expire = 0 )` to set a cache bucket.
+Use `wp_cache_bucket_get( $bucket, $key, $group = '', $force = false )` to get a cache bucket.
+Use `wp_cache_bucket_flush( $bucket, $group = '' )` to destroy a cached bucket.
 
 == Installation ==
 
