@@ -38,15 +38,5 @@ Use `wp_cache_bucket_flush( $bucket, $group = '' )` to destroy a cached bucket.
   * *This plugin isn't much different from the built-in WordPress object cache methods, in fact it still uses them. The biggest advantage of this plugin is the ability to flush all data associated with a bucket.*
 
 ## Changelog
-**1.1.2**  
-* Adding Capistrano deploy scripts
 
-**1.1.1**  
-* Updating readme with function parameters
-
-**1.1**  
-* Updating readme
-* Conversion to class
-
-**1.0**  
-* Initial release
+Please refer to the [Release History](https://github.com/voceconnect/wp-cache-bucket/releases)
