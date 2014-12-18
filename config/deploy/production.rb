@@ -12,3 +12,10 @@ set :build_folders, (
   	config
   }
 ).flatten
+
+set :build_files, (
+  fetch(:build_files) << %w{
+    README.md
+    composer.json
+  }
+).flatten
