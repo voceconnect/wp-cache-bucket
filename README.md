@@ -1,3 +1,5 @@
+### Please note: This plugin is no longer being actively maintained or supported.
+
 # WP Cache Bucket
 Contributors: voceplatforms, prettyboymp, csloisel, kevinlangleyjr  
 Tags: cache, caching, performance, optimization  
